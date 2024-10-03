@@ -1,13 +1,12 @@
 subroutine init
     use params
     use globals
-    use interface_mod, only : qtobq, glid
+    use interface_mod, only : qtobq
 
     implicit none
     integer i, j
 
     !初期条件Q
-    call glid
     do i = imin-2, imax+2
         do j = jmin-2, jmax+2
             if (y(i, j) <= 0.0d0) then
